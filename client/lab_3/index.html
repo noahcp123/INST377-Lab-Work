@@ -1,5 +1,46 @@
-<!--
-    Replace this with your working code from Lab 2, and include:
-    - The styles in this folder's `style.css`
-    - The script in script.js, which should be included via a `<script src="script.js" >` call before your closing </body> tag 
--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Noah Caple's Labs</title>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="header"><h1>Noah Caple's Labs for INST377</h1></header>
+    <div class="container">
+      <div class="left_section box">
+        <h2>Albums</h2>
+        <ol class="box">
+          <li>Yes - Close to the Edge</li>
+          <li>Jeff Buckley - Grace</li>
+          <li>Radiohead - In Rainbows</li>
+          <li>Black Country, New Road - Ants From Up There</li>
+          <li>Frank Ocean - Blonde</li>
+        </ol>
+      </div>
+      <div class="right_section box">
+        <h2>Image Carousel</h2>
+        <div class="carousel">
+          <button class="prev">Prev</button>
+            <div class="slides">
+                <div class="carousel_item visable" id="slide1"><img src="images/Yes-close.jpg" alt="yes"></div>
+                <div class="carousel_item hidden" id="slide2"><img src="images/Jeff_Buckley_grace.jpg" alt="jeff"></div>
+                <div class="carousel_item hidden" id="slide3"><img src="images/Inrainbowscover.png" alt="radiohead"></div>
+                <div class="carousel_item hidden" id="slide4"><img src="images/Ants.jpg" alt="avg"></div>
+                <div class="carousel_item hidden" id="slide4"><img src="images/blonde.jpg" alt="avg"></div>
+            </div>
+          <button class="next">Next</button>
+        </div>
+        <div class="box">
+          Top 5 list album covers
+        </div>
+      </div>
+    </div>
+  <footer class="footer"><p>Github: <a href="https://noahcp123.github.io/INST377-Lab-Work/">noahcp123</a></p></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
