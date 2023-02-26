@@ -1,6 +1,6 @@
 function handelSubmit(event) {
     console.log("clicked")
-    field.textContent = "Submitted"
+    field.textContent = "This randomly redirects to the form action URL and randomly doesnt. I cant replicate it consistantly"
     event.preventDefault();
 }
 
