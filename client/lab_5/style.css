@@ -4,3 +4,138 @@
     Add a flexbox class that will keep two buttons nicely styled next to one another
     under your HTML form and input field
  */
+
+ html {
+    background-color: #EDF1D6;
+    font-size: 16px;
+    min-width: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  
+    /* these are specific to different browsers */
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  
+    font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’, ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #EDF1D6;
+  }
+  
+  .wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .container {
+    margin: 0 20px;
+    display: flex;
+    align-items: start;
+    flex:1;
+  }
+  
+  .header {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .header h1 {
+    background-color: #609966;
+    color: #4a4a4a;
+    border-radius: 6px;
+    border: 2px dashed;
+    font-size: 1.5rem;
+    padding: 1.25rem;
+    margin:0; /* removing the margin on h1 tags means the header pins to the top if we move */
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+  }
+  
+  .box {
+    background-color: #9DC08B;
+    border: 2px dashed;
+    border-radius: 4px;
+    height: fit-content;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+  
+  .leftBox {
+    background-color: #609966;
+    flex: 0 1 auto;
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .rightBox {
+    background-color: #609966;
+    width: 100%;
+    margin: 1rem;
+    align-items: center;
+  }
+  
+  .footer {
+    flex-shrink: 0;
+    padding: 1rem;
+    background-color: #40513B;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  .footer a {
+    color: #9DC08B;
+    text-decoration: underline;
+  }
+  
+  /*
+  Form Styles
+  */
+  .form {
+    flex-direction: column;
+  }
+  form input {
+      /* This is a hack to make sure our boxes line up with one another nicely */
+      width: 100%;
+      width: -moz-available;          /* WebKit-based browsers will ignore this. */
+      width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      width: fill-available;
+  
+      /* here we are setting white space correctly */
+      margin-bottom: 1rem;
+      height: 2rem;
+      border-radius: 4px;
+    }
+  
+    form label {
+      width: 100%;
+      width: -moz-available;          /* WebKit-based browsers will ignore this. */
+      width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      width: fill-available;
+      align-items: flex-start;
+  
+      display: block; /* this turns the label text into a box we can set margins on */
+      margin-bottom: 0.5rem;
+    }
+  
+  /* How To Write A Media Query For Small Screens */
+  
+  @media only screen and (max-width: 736px){
+      /* Rules in here will only apply when a screen is the correct size */
+      /* check it out by using your developer tools to shrink your screen-size */
+      .container {
+        background-color: rgba(204, 8, 162, 0.65);
+      }
+  }
