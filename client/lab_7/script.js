@@ -65,6 +65,7 @@ async function mainEvent() {
 
     // This changes the response from the GET into data we can use - an "object"
     storedList = await results.json();
+    currentList = storedList
     if (storedList.length > 0) {
       generateListButton.classList.remove("hidden");
     }
@@ -96,6 +97,7 @@ async function mainEvent() {
 
   textField.addEventListener("input", (event) => {
     console.log("input", event.target.value);
+    console.log(currentList)
     const newList = filterList(currentList, event.target.value);
     console.log(newList);
     injectHTML(newList);
